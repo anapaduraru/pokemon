@@ -3,8 +3,6 @@ import React from 'react';
 import Layout from '../../Containers/Layout';
 import home from '../../Media/home.svg';
 // import firstPokemon from '../../Media/001.png';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { useHistory } from 'react-router-dom';
 
 
