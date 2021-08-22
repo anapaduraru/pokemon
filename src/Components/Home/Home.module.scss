@@ -1,0 +1,80 @@
+@import '../../main.scss';
+
+.homeContainer{
+    @include content;
+    @include layout(column, flex-start, center);
+    font-family: 'Raleway';
+    width:100%;
+    .introduction {
+        width: 30%;
+        @include layout(column, flex-start, center);
+        h1 {
+            padding-top:5%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:white;
+            text-align: center;
+        }
+        p {
+            padding-top:3%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color:white;
+            text-align: center;
+        }
+        em {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color:#EC5151;
+            text-decoration: none;
+        }
+        img {
+            padding-top:7%;
+            width:100%;
+        }
+    }
+    .lists {
+        width: 30%;
+        @include layout(column, flex-start, center);
+        padding: 3% 0% 10% 0%;
+        p {
+            padding-top:3%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color:white;
+            text-align: center;
+        }
+        .buttons{
+            width:60%;
+            @include layout(row, space-evenly, flex-start);
+            font-family: 'Raleway';
+            
+            button {
+                width:40%;
+                border-radius: 15px;
+                padding:0.8rem;
+                text-align: center;
+                outline: none;
+                border: none;
+                position:none;
+                border: none;
+                text-decoration: none;
+                font-size: 1rem;
+                
+                a {
+                    outline: none;
+                    border: none;
+                    position:none;
+                    text-decoration: none;
+                    color:black;
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    padding-top:5%;
+                    text-align: center;
+                }
+            }
+        }
+       
+    }
+   
+}

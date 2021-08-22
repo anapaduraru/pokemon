@@ -1,0 +1,82 @@
+@import '../../main.scss';
+
+.pokemonContainer {
+    width:100%;
+    @include content;
+    @include layout(column, flex-start, center);
+    padding: 2% 0%;
+    .firstContainer {
+        width:100%;
+        @include content;
+        @include layout(column, flex-start, center);
+        font-family: 'Raleway';
+        h3 {
+            color:white !important;
+            font-size:1rem;
+        }
+        
+        h1 {
+            font-size: 1.7rem;
+            font-weight: bold;
+            text-align: center;
+            font-weight: bold;
+            color:#EC5151;
+        }
+        p{
+            font-size: 1.1rem;
+            font-weight: bold;
+            color:#EC5151;
+        }
+        .info {
+            width: 30%;
+            @include layout(column, center, center);
+            .firstColumn {
+                @include layout(column, center, center);
+                img {
+                    width: 100%;
+                }
+            }
+            .secondColumn {
+                padding-top:5%;
+                width: 100%;
+                @include layout(column, center, flex-start);
+                .moves {
+                    @include layout(column, center, flex-start);
+                    padding: 5% 0%;
+                }
+                .stats {
+                    width:100%;
+                    padding-top: 5%;
+                    @include layout(row, center, flex-start);
+                    .stat{
+                        width:100%;
+                        padding-right: 2%;
+                        h2 {
+                            font-size:1.1rem;
+                            font-weight: bold;
+                            color:white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .secondContainer {
+        width:50%;
+        @include layout(row, center, flex-start);
+        padding: 5% 0%;
+        button {
+            border-radius: 15px;
+            padding:0.8rem;
+            text-align: center;
+            outline: none;
+            border: none;
+            position:none;
+            border: none;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+    }
+
+}

@@ -1,0 +1,68 @@
+@import '../../main.scss';
+
+.footerContainer {
+  @include footer;
+  @include layout(row, center, center);
+  font-family: 'Raleway';
+  width:100%;
+  .firstColumn {
+    width:40%;
+    height: 60%;
+    padding-left: 10%;
+    @include layout(column, center, flex-end);
+    .rectangle {
+      @include layout(column, center, center);
+      width: 55%;
+      height: 100%;
+      border:2px solid black;
+      border-radius: 15px;
+      .firstLine {
+        @include layout(row, flex-start, center);
+        width:100%;
+        height:100%;
+      }
+      .secondLine {
+        @include layout(row, flex-end, center);
+        width:100%;
+        height:100%;
+      }
+      button {
+        width:15%;
+        padding:0.5rem;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        position:none;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin-right: 20%;
+        margin-left: 10%;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        a{
+          outline: none;
+          border: none;
+          position:none;
+          text-decoration: none;
+          color:black;
+          @include layout(row, center, center);
+        }
+      }
+    }
+  }
+  .secondColumn {
+    width:40%;
+    padding-right: 5%;
+    @include layout(column, center, flex-start);
+    img {
+      width:45%;
+    }
+    p {
+      width:70%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color:white;
+      text-align: center;
+    }
+  }
+}

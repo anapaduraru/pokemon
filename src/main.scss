@@ -1,0 +1,30 @@
+@mixin layout($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin content {
+    width: 100%;
+    min-height: calc(125vh - 10vh);
+    letter-spacing:0.8px;
+    background-color:#242323;
+}
+
+@mixin header {
+  width: 100%;
+  height: 10vh;
+  background-color:#242323;
+  letter-spacing:0.25px;
+}
+
+@mixin footer {
+    width: 100%;
+    height: 40vh;
+    background-color: #3F3D56;
+    letter-spacing:0.25px;
+}
+
+
+

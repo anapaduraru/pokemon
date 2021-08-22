@@ -1,0 +1,101 @@
+@import '../../main.scss';
+
+.allContainer { 
+    width:100%;
+    @include content;
+    @include layout(column, flex-start, center);
+    font-family: 'Raleway';
+    padding-bottom: 5%;
+    .firstContent {
+        width:100%;
+        @include layout(column, flex-start, center);
+        padding-bottom: 5%;
+        
+        h1 {
+            padding:0% 0% 5% 0%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:white;
+            text-align: center;
+        }
+        .cards {
+            width:80%;
+            
+            .column {
+                float: left;
+                width: 25%;
+                padding: 3% 5%;
+            }
+            .content {
+                @include layout(column, center,center);
+                padding:10%;
+                border-radius: 15px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+                background-color: white !important;
+                img {
+                    width:80%;
+                }
+                a{
+                    outline: none;
+                    border: none;
+                    position:none;
+                    text-decoration: none;
+                    color:black;
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    padding-top:5%;
+                    text-align: center;
+                }
+                button {
+                    @include layout(row, space-between,center);
+                    width:100%;
+                    border-radius: 15px;
+                    padding:1rem;
+                    text-align: center;
+                    outline: none;
+                    border: none;
+                    position:none;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                    background-color:#242323;
+                    color:white;
+                }
+            }
+            
+        }
+    }
+  .pagination {
+      @include layout(row, center, flex-end);
+      width: 100%;
+      padding: 3% 0%;
+  }
+  :global {
+    .ant-pagination-item-active:focus a, .ant-pagination-item-active:hover a, .ant-pagination-item-active:active a{
+      color: black !important;
+      border-color: black !important;
+    }
+    
+    .ant-pagination-item-active, .ant-pagination-item-active:focus , .ant-pagination-item-active:hover {
+      border-color: black !important;
+      color: black !important;
+    }
+    .ant-pagination-item:hover, .ant-pagination-item:active , .ant-pagination-item:focus {
+      border-color: black !important;
+      color: black !important;
+    }
+    a:hover, a:focus, a:active, a:link, a:visited, a:disabled,a::-webkit-textfield-decoration-container, a::after{
+      color: black !important;
+      border-color: black !important;
+    }
+    .ant-pagination-item:focus,.ant-pagination-item:active, .ant-pagination-item:hover {
+      border-color: black !important;
+      color: black !important;
+    }
+    .ant-pagination-item-active a {
+      color: black !important;
+    }
+  }
+}
+
+

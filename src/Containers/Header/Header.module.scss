@@ -1,0 +1,29 @@
+@import '../../main.scss';
+
+.headerContainer{
+	@include header;
+	@include layout(row, space-between, center);
+	font-family: 'Raleway';
+	.firstLine {
+		width:30%;
+		@include layout(row, flex-start, center);
+		padding-left: 10%;
+		img {
+			width:12%;
+		}
+	}
+	.secondLine {
+		width:30%;
+		@include layout(row, flex-end, center);
+		padding-right: 10%;
+		a {
+			color:white;
+			text-decoration: none;
+			font-size: 1.2rem;
+			font-family: 'Raleway';
+			font-weight: bold;
+			padding-right: 5%;
+		}
+	}
+	
+}

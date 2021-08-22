@@ -1,0 +1,29 @@
+@import "../../main.scss";
+
+.aboutUsContainer {
+    @include content;
+    width:100%;
+    @include layout(column, flex-start, center);
+    p{
+        text-align: center;
+        padding: 5% 30% 3% 30%;
+        color:white;
+        font-size: 1rem;
+        font-family: "Raleway";
+
+        a {
+            outline: none;
+            border: none;
+            position:none;
+            text-decoration: none;
+            color:#EC5151;
+            font-weight: bold;
+            padding-top:5%;
+            text-align: center;
+        }
+    }
+    img {
+        width:30%;
+
+    }
+}
