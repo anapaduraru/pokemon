@@ -18,6 +18,25 @@
             color:white;
             text-align: center;
         }
+        .buttons {
+          width:50%;
+          @include layout(row, space-between, center);
+          button {
+            width:20%;
+            border-radius: 15px;
+            padding:1rem;
+            text-align: center;
+            outline: none;
+            border: none;
+            position:none;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            background-color:white;
+            color:black;
+            font-weight: bold;
+          }
+        }
         .cards {
             width:80%;
             
@@ -47,7 +66,7 @@
                     text-align: center;
                 }
                 button {
-                    @include layout(row, space-between,center);
+                    @include layout(row, space-evenly,center);
                     width:100%;
                     border-radius: 15px;
                     padding:1rem;

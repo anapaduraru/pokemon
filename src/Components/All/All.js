@@ -2,7 +2,7 @@ import { React, useState, useContext } from 'react';
 import Layout from '../../Containers/Layout';
 import styles from './All.module.scss';
 import pokemon from '../../Media/logo.png';
-import { HeartFilled } from '@ant-design/icons';
+import { HeartFilled, DeleteFilled } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import axios from 'axios';
@@ -81,13 +81,14 @@ const All = () => {
             <div className={styles.allContainer}>
                 <div className={styles.firstContent}>
                     <h1>All characters</h1>
-                    <button onClick={handleNext}>
-                        next
-                    </button>
-
-                    <button onClick={handlePrev}>
-                        prev
-                    </button>
+                    <div className={styles.buttons}>
+                        <button onClick={handlePrev}>
+                            Prev
+                        </button>
+                        <button onClick={handleNext}>
+                            Next
+                        </button>
+                    </div>
                     <div className={styles.cards}>
                         {pokemonList && pokemonList.length > 0 ? (pokemonList.map((item, index) => index >= minVal &&
                             index < maxVal &&
@@ -97,7 +98,7 @@ const All = () => {
                                         <img src={pokemon} alt="pokemon" />
                                         <Link to='/pokemon' onClick={() => handlePokemonName(item.name)} ><h2>{item.name}</h2> </Link>
                                         {favorites.includes(item.name) ? (
-                                            <button onClick={() => handleDelete(item.name)}><HeartFilled /> Delete</button>
+                                            <button onClick={() => handleDelete(item.name)}><DeleteFilled />Remove Card</button>
                                         ) : (<button onClick={() => handleAdd(item.name)}><HeartFilled /> Add to Favorites</button>)}
                                     </div>
                                 </div>))) : (null)}

@@ -5,11 +5,11 @@
     @include content;
     @include layout(column, flex-start, center);
     padding: 2% 0%;
+    font-family: 'Raleway';
     .firstContainer {
         width:100%;
         @include content;
         @include layout(column, flex-start, center);
-        font-family: 'Raleway';
         h3 {
             color:white !important;
             font-size:1rem;
@@ -64,7 +64,7 @@
     .secondContainer {
         width:50%;
         @include layout(row, center, flex-start);
-        padding: 5% 0%;
+        padding: 2% 0%;
         button {
             border-radius: 15px;
             padding:0.8rem;
@@ -75,7 +75,71 @@
             border: none;
             text-decoration: none;
             font-size: 1rem;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            background-color: white;
+            color:black;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+    }
+    .thirdContainer {
+        width:30%;
+        padding: 5% 0%;
+        h2 {
+            color:white;
+            font-weight: bold;
+            padding:5% 0%;
+        }
+        label {
+            color:white;
+        }
+        button {
+            @include layout(row, center, center);
+            border-radius: 15px;
+            padding:1.2rem;
+            text-align: center;
+            outline: none;
+            border: none;
+            position:none;
+            border: none;
+            text-decoration: none;
+            font-size: 1rem;
+            background-color: white;
+            font-weight: bold;
+            color:black;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            
+        }
+        span {
+            text-align: center;
+        }
+    }
+    .comments {
+        @include layout(column, center,flex-start);
+        padding:2% 0%;
+        width:30%;
+        overflow-wrap: break-word;
+        .comment {
+            @include layout(row, space-between,flex-start);
+            width:100%;
+            padding:2%;
+            margin: 2% 0%;
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            background-color: white !important;
+            .info {
+                width:70%;
+                h3 {
+                    font-weight: bold;
+                }
+            }
+           
+        }
+       
+    }
+    :global {
+        .ant-input {
+            border-radius: 15px;
+            padding:0.5rem;
+            border: none;
         }
     }
 

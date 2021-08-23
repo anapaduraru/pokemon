@@ -10,8 +10,6 @@ const Home = () => {
 
   let history = useHistory();
 
-  AOS.init({ duration: 2500 });
-
   return (
     <Layout>
       <div className={styles.homeContainer}>

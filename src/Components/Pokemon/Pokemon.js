@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import Layout from '../../Containers/Layout';
 import styles from './Pokemon.module.scss';
 import pokemon from '../../Media/pokemon.png';
-import { HeartFilled } from '@ant-design/icons';
+import { DeleteFilled, HeartFilled } from '@ant-design/icons';
 import axios from 'axios';
 import { Form, Input, Button } from 'antd';
 import MainContext from '../../Context/provider/context';
@@ -104,10 +104,11 @@ const Pokemon = () => {
                     </div>
                 </div>
                 <div className={styles.secondContainer}>
-                    {info && favorites.includes(info.name) ? (<button onClick={() => handleDelete(info.name)}><HeartFilled /> Delete</button>) :
+                    {info && favorites.includes(info.name) ? (<button onClick={() => handleDelete(info.name)}><DeleteFilled /> Remove Card</button>) :
                         (<button onClick={() => handleAdd(info.name)}><HeartFilled /> Add to Favorites</button>)}
                 </div>
                 <div className={styles.thirdContainer}>
+                    <h2> Leave us a comment</h2>
                     <Form >
                         <Form.Item
                             label="Name"
@@ -117,11 +118,7 @@ const Pokemon = () => {
 
                         <Form.Item
                             label="Number of pokemons"
-                            rules={[
-                                {
-                                    type: 'number',
-                                },
-                            ]}
+                            rules={[{ type: 'number', min: 0, max: 99 }]}
                         >
                             <Input onChange={event => handleChangeInputs(event, 'number')} />
                         </Form.Item>
@@ -130,24 +127,29 @@ const Pokemon = () => {
                             <Input.TextArea onChange={event => handleChangeInputs(event, 'description')} />
                         </Form.Item>
                         <Form.Item >
-                            <Button type="primary" onClick={handleSubmit}>
+                            <Button onClick={handleSubmit}>
                                 Submit
                             </Button>
                         </Form.Item>
                     </Form>
                 </div>
-                {comments && comments.length > 0 ? (comments.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            <h2>cacat</h2>
-                            <p> {item.name}</p>
-                            <p>{item.number}</p>
-                            <p>{item.description}</p>
-                            <p>{item.date}</p>
 
-                        </div>
-                    )
-                })) : (null)}
+                <div className={styles.comments}>
+                    {comments && comments.length > 0 ? (comments.map((item, index) => {
+                        return (
+                            <div key={index} className={styles.comment}>
+                                <div className={styles.info}>
+                                    <h3>{item.name}</h3>
+                                    <p>Number of pokemons seen: {item.number}</p>
+                                    <p>Details: {item.description}</p>
+                                </div>
+                                <p>{item.date}</p>
+                            </div>
+                        )
+                    })) : (null)}
+
+                </div>
+
             </div>
 
         </Layout >

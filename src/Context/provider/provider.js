@@ -8,7 +8,6 @@ const AppProvider = props => {
     const initialValue = {
         profile: {
             favorites: [],
-            currentPage: '/'
         }
     };
 

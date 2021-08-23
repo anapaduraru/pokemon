@@ -30,7 +30,7 @@ const Favorites = () => {
                                 <div className={styles.content}>
                                     <img src={pokemon} alt="pokemon" />
                                     <Link to='/pokemon'><h2>{item}</h2></Link>
-                                    <button onClick={() => handleDelete(item)}><DeleteFilled /> Remove from Favorites</button>
+                                    <button onClick={() => handleDelete(item)}><DeleteFilled /> Remove Card</button>
                                 </div>
                             </div>))) : (null)}
                     </div>

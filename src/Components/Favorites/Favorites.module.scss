@@ -46,7 +46,7 @@
                     text-align: center;
                 }
                 button {
-                    @include layout(row, space-between,center);
+                    @include layout(row, space-evenly,center);
                     width:100%;
                     border-radius: 15px;
                     padding:1rem;
